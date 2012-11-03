@@ -1,0 +1,1 @@
+javascript stopwatch for inspecting excuting time.
