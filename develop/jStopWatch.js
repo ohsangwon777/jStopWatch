@@ -80,11 +80,19 @@ var jStopWatch = {
 	},
 
 	_updatePosition : function(obj){
-		var jStopwatchCnt = $('.'+obj.attr('class')).length;
+
+		var jStopwatchCntClass = obj.attr('class');
+		var jStopwatchs = $('.'+jStopwatchCntClass);
 		var jStopwatchHeight = obj.height();
-		var jStopwatchTop = obj.css('top').replace('px','');
+
+		jStopwatchs.each(function(i){
+			var cssTop = (i)*jStopwatchHeight + (i+1)*10;
+			$(this).css({
+				top:cssTop,
+			})
+		});
 		
-		console.log(jStopwatchCnt, jStopwatchHeight, jStopwatchTop);
+		
 
 	},
 
@@ -117,6 +125,7 @@ var jStopWatch = {
 			'background: #272822;'+
 			'color: white;'+
 			'border-radius: 5px;'+
+			'-webkit-transition: top 0.3s;'+
 			'opacity: 0.9;'
 		,jobName :
 			'margin-right: 10px;'+
