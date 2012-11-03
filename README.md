@@ -2,7 +2,7 @@ jStopWatch.js
 =============
 
  Information
- ---------------------------
+---------------------------
 
  jStopWatch(javascript stop watch) for measuring javascript excution time
 
